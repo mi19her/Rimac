@@ -11,16 +11,15 @@ const Index = () => (
 
 Index.getInitialProps = async () => {
   const res = await fetch("https://freestyle.getsandbox.com/dummy/obtenerdatospersona", {
-    method: 'POST'
+    method: "POST",
   });
   const data = await res.json();
 
-  console.log('resultado', data);
+  console.log("resultado", data);
 
-  // return {
-  //   shows: data.show,
-  // };
-  return {}
+  return {
+    shows: data,
+  };
 };
 
 export default Index;

@@ -61,18 +61,51 @@ ul {
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 10% 0%;
   color: $plomo;
   strong {
     color: $rojo;
   }
+  form {
+    width: 50%;
+    padding: 10% 0%;
+    .form-dni {
+      display: flex;
+      width: 100%;
+      border: 1px solid #d4d5e8;
+      border-radius: 4px;
+      height: 56px;
+      margin-bottom: 5%;
+      padding-left: 5%;
+      outline: none;
+      input {
+        width: 80%;
+        padding-left: 5%;
+      }
+      select, option {
+        width: 20%;
+        border: none;
+        outline: none;
+      }
+    }
+    p > a {
+      color: $plomo;
+    }
+    button {
+      width: 206px;
+      height: 56px;
+      background: #ef3340;
+      border-radius: 6px;
+      border: none;
+      color: white;
+    }
+  }
 }
-.girls{
+.girls {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  img{
+  img {
     width: 234.08px;
     height: auto;
   }
