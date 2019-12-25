@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+$roboto: "Roboto", sans-serif;
+$lato: "Lato", sans-serif;
+$plomo: #494f66;
+$rojo: #fc4e55;
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  justify-content: center;
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main > div {
+  flex: 1;
+  height: 100vh;
+}
+.inicio {
+  height: -webkit-fill-available;
+  background: $rojo;
+  border-radius: 0% 0% 10%;
+  transform: skew(-2deg);
+  -webkit-transform-origin-y: top;
+}
+
+.login {
+  padding: 10% 20%;
+  color: #ffffff;
+}
+h2 {
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.logo {
+  border-bottom: 0.5px solid #ffffff;
+  padding: 5% 10%;
+}
+
+ul {
+  list-style-type: square;
+  list-style-image: url("/botiquin.png");
+  padding-bottom: 5%;
+}
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10% 0%;
+  color: $plomo;
+  strong {
+    color: $rojo;
+  }
+}
+.girls{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  img{
+    width: 234.08px;
+    height: auto;
+  }
+}
