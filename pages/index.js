@@ -1,13 +1,28 @@
-import Base from "../components/Base";
+import Intro from "../components/Intro";
 import Login from "../components/Login";
-import LoginTitular from "../components/LoginTitular";
-import fetch from "isomorphic-unfetch";
+ import fetch from "isomorphic-unfetch";
+import "../styles/index.scss";
 
-const Index = () => (
-  <Base children2={<LoginTitular />}>
-    <Login />
-  </Base>
-);
+const Index = () => {
+  // console.log(props.data.data);
+
+  return (
+    <div className="main">
+      <div className="inicio">
+        <section className="logo">
+          <img src="/logo.png" alt="logo" />
+        </section>
+        <Intro />
+      </div>
+        <section className="girls">
+        <img src="/girls.png" alt="logo" />
+      </section>
+      <div className="formulario">
+        <Login />
+      </div>
+    </div>
+  );
+};
 
 Index.getInitialProps = async () => {
   const res = await fetch("https://freestyle.getsandbox.com/dummy/obtenerdatospersona", {
@@ -18,7 +33,7 @@ Index.getInitialProps = async () => {
   console.log("resultado", data);
 
   return {
-    shows: data,
+    data,
   };
 };
 

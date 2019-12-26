@@ -23,6 +23,9 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+  @media screen and (max-width: 764px) {
+    flex-direction: column;
+  }
 }
 
 .main > div {
@@ -40,18 +43,23 @@ body {
 .login {
   padding: 10% 20%;
   color: #ffffff;
+  @media screen and (max-width: 764px) {
+    padding: 5% 30% 0% 10%;
+  }
 }
 h2 {
   font-family: $lato;
   font-weight: 300;
   font-size: 40px;
+  @media screen and (max-width: 764px) {
+    font-size: 28px;
+    margin: 5% 0%;
+  }
 }
-
 .logo {
-  border-bottom: 0.5px solid #ffffff;
+  border-bottom: 1px solid #F55D68;
   padding: 5% 10%;
 }
-
 ul {
   list-style-type: square;
   list-style-image: url("/botiquin.png");
@@ -67,7 +75,9 @@ ul {
   }
   form {
     width: 50%;
-    padding: 10% 0%;
+    @media screen and (max-width: 764px) {
+      width: 75%;
+    }
     .form-dni {
       display: flex;
       width: 100%;
@@ -80,8 +90,11 @@ ul {
       input {
         width: 80%;
         padding-left: 5%;
+        border: none;
+        outline: none;
       }
-      select, option {
+      select,
+      option {
         width: 20%;
         border: none;
         outline: none;
@@ -93,20 +106,94 @@ ul {
     button {
       width: 206px;
       height: 56px;
-      background: #ef3340;
+      background: $rojo;
       border-radius: 6px;
       border: none;
       color: white;
+      &:not(:disabled):hover{
+        background: $rojo;
+        color: $plomo;
+      }
+      &:disabled {
+        background: #ddd;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
+}
+input[type=checkbox]{
+  -webkit-appearance: button;
+    border: double 2px #92D66F;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 15px;
+    height: 15px;
+    &:checked{
+      background:#92D66F;
+    }
 }
 .girls {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+  @media screen and (max-width: 764px) {
+    left: 85%;
+    top: 40%;
+  }
   img {
     width: 234.08px;
     height: auto;
+    @media screen and (max-width: 764px) {
+      width: 150px;
+    }
   }
+}
+@media screen and (max-width: 764px) {
+  footer {
+    display: none;
+  }
+}
+
+
+.main1 {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  justify-content: center;
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  @media screen and (max-width: 764px) {
+    flex-direction: column;
+  }
+}
+.main1 > div {
+  flex: auto;
+  height: 100vh;
+  @media screen and (max-width: 764px) {
+    height: auto;
+  }
+}
+.girls1 {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate3d(-50%, -50%, 0);
+  @media screen and (max-width: 764px) {
+    display: none;
+  }
+  img {
+    width: 360px;
+    height: auto;
+  }
+}
+.btn-continuar {
+  display: flex;
+  justify-content: space-between;
 }
