@@ -5,7 +5,7 @@ export default () => (
   <form>
     <div>
       <h2>
-        Hola <strong>Eva</strong>
+        Hola <strong>Sorayda</strong>
       </h2>
       <h2>cuéntanos sobre tí</h2>
     </div>
